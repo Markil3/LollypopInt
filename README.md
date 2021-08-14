@@ -1,17 +1,15 @@
-# commandlinePlay
-Uses VLC media player and a music database to search for and play music from the linux command line.
+# Lollypop Interface
+This application works in extension to the Lollypop Music Player to allow users to search for and play songs from a command-line interface.
 
 It works in two parts. The first one, the play python module, does most of the work. It accepts a series of search terms and then looks through a compatible SQLite3 database (the Lollypop music player database, by default) for the songs before launching VLC media player.
 
 The second part, the key listener, will listen for arguments for the python module from the keyboard without changing window focus, with audio feedback to ensure that the user knows that they are inputing into the program. This part will need to be run by a user added to the `input` user group.
 
-## Building
+## Building and Installing
 
-The listener can be built with the following command
-```
-gcc capture.c -o play_capture
-```
-The Python module does not require any external dependencies as far as execution goes.
+Running `make` will build the play_capture and play_repeat utilities. The 
+
+To install, run `make install`. This will install the utilities to $HOME/.local/bin and the python module to the standard installation directories via pip. For convenience, a "play" utility is installed to the user bin directory for running the python module.
 
 ## Song Database
 

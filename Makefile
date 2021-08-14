@@ -12,6 +12,7 @@ install_repeat: play_repeat
 
 install_lollypop: lollypopint
 	pip install dist/*.whl
+	cp play ~/.local/bin/play_capture
 
 play_capture: capture.c
 	$(CC) -o play_capture capture.c
@@ -21,6 +22,9 @@ play_repeat: repeat.c
 
 lollypopint: setup.py lollypopint/__init__.py
 	python setup.py bdist_wheel
+
+upload: lollypopint
+	python -m twine upload dist/*
 
 clean:
 	rm -f play_capture play_repeat
