@@ -1,0 +1,6 @@
+build/
+dist/
+lollypopint.egg-info/
+play_capture
+play_repeat
+lollypopint/__pycache__/
