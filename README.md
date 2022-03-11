@@ -1,13 +1,25 @@
 # Lollypop Interface
 This application works in extension to the Lollypop Music Player to allow users to search for and play songs from a command-line interface.
 
-It works in two parts. The first one, the play python module, does most of the work. It accepts a series of search terms and then looks through a compatible SQLite3 database (the Lollypop music player database, by default) for the songs before launching VLC media player.
+It works in two parts. The first one, the play python module, does most of the work. It accepts a series of search terms and then looks through a compatible SQLite3 database (the Lollypop music player database, by default) for the songs before launching the Lollypop music player.
 
 The second part, the key listener, will listen for arguments for the python module from the keyboard without changing window focus, with audio feedback to ensure that the user knows that they are inputing into the program. This part will need to be run by a user added to the `input` user group.
 
+# A Message on the Future of this Application.
+
+*To anyone who finds this useful.*
+
+*I've recently taken on a new job, and, due to the demands of a full-time developer job, I will no longer be able to maintain this project. I've had a lot of fun with it, but continuing it for the future is simply unfeasible.*
+
+*With that said, this application is fully open-source, and anyone is available to freely use it, modify it, or maintain their own copy. The only thing I require is that the copyright, license, and source is preserved. I hope that you are able to make full use of this application.*
+
+*May God bless you all,*
+
+*Markil 3*
+
 ## Building and Installing
 
-Running `make` will build the play_capture and play_repeat utilities. The 
+Running `make` will build the play_capture and play_repeat utilities. 
 
 To install, run `make install`. This will install the utilities to $HOME/.local/bin and the python module to the standard installation directories via pip. For convenience, a "play" utility is installed to the user bin directory for running the python module.
 
